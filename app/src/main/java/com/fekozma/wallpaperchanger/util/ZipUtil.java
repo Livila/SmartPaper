@@ -62,8 +62,8 @@ public class ZipUtil {
 					String name = entry.getName();
 
 					File outFile;
-					if (name.startsWith("wallpapers/")) {
-						outFile = new File(wallpapersDir, name.substring("wallpapers/".length()));
+					if (name.startsWith(wallpapersDir + "/")) {
+						outFile = new File(wallpapersDir, name.substring((wallpapersDir + "/").length()));
 					} else if (name.equals("database/wallpaperchanger.db")) {
 						outFile = dbFile;
 					} else {

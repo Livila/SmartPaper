@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HttpClient {
 	private static final String BASE_WEATHER_URL = "https://api.openweathermap.org/data/2.5/";
-	private static final String BASE_ADRESS_URL = "https://nominatim.openstreetmap.org/";
+	private static final String BASE_ADDRESS_URL = "https://nominatim.openstreetmap.org/";
 
 	private static Retrofit retrofit;
 
@@ -26,7 +26,7 @@ public class HttpClient {
 			.build();
 
 		Retrofit retrofit = new Retrofit.Builder()
-			.baseUrl(BASE_ADRESS_URL)
+			.baseUrl(BASE_ADDRESS_URL)
 			.client(client)
 			.addConverterFactory(GsonConverterFactory.create())
 			.build();
